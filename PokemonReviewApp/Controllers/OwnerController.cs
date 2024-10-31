@@ -24,12 +24,10 @@ namespace PokemonReviewApp.Controllers
         [ProducesResponseType(200, Type = typeof(IEnumerable<OwnerDto>))]
         public IActionResult GetOwners()
         {
-            var owners = _ownerRepository.GetOwners();
+            var owners =  _mapper.Map<List<OwnerDto>>(_ownerRepository.GetOwners());
 
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
             return Ok(owners);
         }
