@@ -133,7 +133,7 @@ namespace PokemonReviewApp.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult DeleteCategory(int ownerId)
+        public IActionResult DeleteOwner(int ownerId)
         {
             if (!_ownerRepository.OwnerExists(ownerId))
             {

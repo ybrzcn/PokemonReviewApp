@@ -129,7 +129,7 @@ namespace PokemonReviewApp.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult DeleteCategory(int countryId)
+        public IActionResult DeleteCountry(int countryId)
         {
             if (!_countryRepository.CountryExists(countryId))
             {

@@ -130,7 +130,7 @@ namespace PokemonReviewApp.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
-        public IActionResult DeleteCategory(int reviewerId)
+        public IActionResult DeleteReviewer(int reviewerId)
         {
             if (!_reviewerRepository.ReviewerExists(reviewerId))
             {
