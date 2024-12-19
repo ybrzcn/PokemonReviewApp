@@ -85,7 +85,7 @@ namespace PokemonReviewApp.Controllers
 
             if (!_categoryRepository.CreateCategory(categoryMap))
             {
-                ModelState.AddModelError("", "Something went wrong while savin");
+                ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
             }
 
