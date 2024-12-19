@@ -116,8 +116,11 @@ namespace PokemonReviewApp.Controllers
 
             var countryMap = _mapper.Map<Country>(updatedCountry);
 
-            if(!_countryRepository.UpdateCountry(countryMap))
+            if (!_countryRepository.UpdateCountry(countryMap))
+            {
+                ModelState.AddModelError("", "Something went wrong updating country");
                 return StatusCode(500, ModelState);
+            }
 
             return NoContent();
         }
